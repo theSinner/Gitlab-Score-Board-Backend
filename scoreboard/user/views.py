@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from . import serializers
 from drf_yasg.utils import swagger_auto_schema
-from .auth import get_server
+from app.auth import get_server
 from app.models import Application
 from .utils import slugify_name
 from user.models import User

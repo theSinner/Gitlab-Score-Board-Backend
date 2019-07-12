@@ -13,6 +13,12 @@ class Application(models.Model):
     secret_token = models.CharField(max_length=400)
     url = models.CharField(max_length=100, null=True, blank=True)
     app_type = models.CharField(max_length=10, null=True, choices=TYPES)
+    admin_access_token = models.CharField(max_length=100)
+    fetched_at = models.DateTimeField(
+        auto_now_add=True,
+        null=True,
+        blank=True
+    )
     created_at = models.DateTimeField(
         auto_now_add=True,
         null=True,
